@@ -1,0 +1,9 @@
+# issues.yml file
+name: Handle Issues
+on: issues
+jobs:
+    issueInfo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Ouput Issue details
+              run: echo "${{toJson(github.event)}}"
